@@ -2,7 +2,7 @@
 
 Aplicar los selectores, pseudo-clases, pseudo-elementos así como sus combinadores para estilizar un documento html existente.
 
-El Material de teams (Enlaces a un sitio externo.)
+El Material de [teams](https://teams.microsoft.com/_#/school/files/General?threadId=19%3Aafa22bf795c049669d2c3dfc660f44cd%40thread.tacv2&ctx=channel&context=Tarea%25202&rootfolder=%252Fsites%252FDSAW_O2020_ESI3124A%252FDocumentos%2520compartidos%252FGeneral%252FTareas%252FTarea%25202)
 
 ### Instrucciones:
 Se estilizará una versión reducida de esta [página web](http://www.dhs.state.il.us/accessibility/references/css-quick-reference.html).  
