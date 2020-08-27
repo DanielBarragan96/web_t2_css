@@ -5,7 +5,7 @@ Aplicar los selectores, pseudo-clases, pseudo-elementos así como sus combinador
 El Material de teams (Enlaces a un sitio externo.)
 
 ### Instrucciones:
-Se estilizará una versión reducida de esta [página web] (http://www.dhs.state.il.us/accessibility/references/css-quick-reference.html).  
+Se estilizará una versión reducida de esta [página web](http://www.dhs.state.il.us/accessibility/references/css-quick-reference.html).  
 Se puede descargar de Teams. A esta página se aplicarán diversas reglas de CSS en un archivo externo llamado style.css y cada regla tiene un valor de 8 puntos.  
 La calificación máxima que puedes obtener son 100 puntos.
 
