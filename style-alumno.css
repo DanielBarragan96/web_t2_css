@@ -1,8 +1,8 @@
 /* ***TAREA 2 CSS REGLAS, SELECTORES, PSEUDO-CLASES, PSEUDO-ELEMENTOS****** */
- 
+
 /* 
-    Nombre:
-    Expediente:
+    Nombre: Daniel Barragan Alvarez
+    Expediente: ie702554
 */
 
 /* 
@@ -12,22 +12,41 @@ Instrucciones:
 */
 
 /* Regla 1: A todos los enlaces (todos están al final de la página) añadir borde y background negro y texto blanco.  */
-
+ul.references a {
+    background-color: black;
+    color: white;
+}
 
 /* Regla 2:  Todos los encabezados que tengan sombra negra.    */
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-shadow: 0px 0px 10px black;
+}
 
 /* Regla 3:  Al primer y penúltimo h2 (“Syntax”  y  “Browser Compatibility Filters & Hacks”)  cambiar el tamaño de letra por “3em” */
-
+h2:first-of-type,
+h2:nth-last-of-type(2) {
+    font-size: 3em;
+}
 
 /* Regla 4:  A las celdas pares de las tablas impares cambiar el BC por lightgreen */
-
+table:nth-of-type(odd) td:nth-of-type(even) {
+    background-color: lightgreen;
+}
 
 /* Regla 5:  A los renglones impares de las tablas pares cambiar el BC por lightcoral */
-
+table:nth-of-type(even) tr:nth-of-type(odd) {
+    background-color: lightcoral;
+}
 
 /* Regla 6:  Que funcionen los radio buttons al seleccionarlos que suceda lo que dicen.  Usar display:none para ocultar elementos. */
-
+input[type="radio"]:checked+h1 {
+    font-size: 30em;
+}
 
 /* Regla 7:  seleccionar los primeros h3  hasta  el que dice “size”  (los siguientes h3 ya no se consideran) y añadirle borde, BC lightblue, border-radius:10px,  centrado,  tamaño de letra 2em */
 
@@ -51,4 +70,3 @@ Instrucciones:
 
 
 /* R14:  Selecciona todos los elementos que tengan el atributo class  y ponlos con fuente itálica y subrayados.  */
-
