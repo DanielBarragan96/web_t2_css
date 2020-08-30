@@ -13,6 +13,7 @@ Instrucciones:
 
 /* Regla 1: A todos los enlaces (todos están al final de la página) añadir borde y background negro y texto blanco.  */
 ul.references a {
+    border: 1px solid black;
     background-color: black;
     color: white;
 }
@@ -44,18 +45,37 @@ table:nth-of-type(even) tr:nth-of-type(odd) {
 }
 
 /* Regla 6:  Que funcionen los radio buttons al seleccionarlos que suceda lo que dicen.  Usar display:none para ocultar elementos. */
-input[type="radio"]:checked+h1 {
-    font-size: 30em;
+input[type="radio"]:nth-of-type(1):checked~table:nth-of-type(even) {
+    display: none;
+}
+
+input[type="radio"]:nth-of-type(2):checked~table:nth-of-type(odd) {
+    display: none;
 }
 
 /* Regla 7:  seleccionar los primeros h3  hasta  el que dice “size”  (los siguientes h3 ya no se consideran) y añadirle borde, BC lightblue, border-radius:10px,  centrado,  tamaño de letra 2em */
-
+h3:nth-of-type(-n + 12) {
+    border: 1px solid black;
+    background: lightblue;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2em;
+}
 
 /* Regla 8: Seleccionar los elementos con etiqueta code que están fuera de las tablas cambiar a negritas, itálicas, color: lightcoral */
-
+code:not(table) {
+    font-weight: bold;
+    font-style: italic;
+    color: lightcoral;
+    font-size: xx-large;
+}
 
 /* Regla 9: Al poner el mouse en una celda de una tabla par que cambie su bc y el de la última celda del siguiente renglón.  BC =blue, texto= White */
-
+table:nth-of-type(even) tr>td:hover,
+table:nth-of-type(even) tr:hover+tr>td:last-of-type {
+    background-color: blue;
+    color: white;
+}
 
 /* Regla 10: Al poner el mouse en un renglón par de una tabla impar que cambie el color de sus celdas por lightseagreen */
 
