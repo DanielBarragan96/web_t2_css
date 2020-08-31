@@ -6,6 +6,8 @@
     Carrera: Ing. Electronica
     
     Conclusion: Esta tarea me ayudo a comprender mejor el uso de los pseudo elementos y los selectores combinadores. Los mayores retos que tuve fue en las reglas que inluian negaciones como el poner un formato a todas las etiquetas code que no fueran hijos de alguna tabla.
+
+    Git: https://github.com/DanielBarragan96/web_t2_css
 */
 
 /* 
@@ -48,11 +50,11 @@ table:nth-of-type(even) tr:nth-of-type(odd) {
 }
 
 /* Regla 6:  Que funcionen los radio buttons al seleccionarlos que suceda lo que dicen.  Usar display:none para ocultar elementos. */
-input[type="radio"]:nth-of-type(1):checked~table:nth-of-type(even) {
+input[type="radio"]:nth-of-type(1):checked~table:nth-of-type(odd) {
     display: none;
 }
 
-input[type="radio"]:nth-of-type(2):checked~table:nth-of-type(odd) {
+input[type="radio"]:nth-of-type(2):checked~table:nth-of-type(even) {
     display: none;
 }
 
@@ -66,12 +68,11 @@ h3:nth-of-type(-n + 12) {
 }
 
 /* Regla 8: Seleccionar los elementos con etiqueta code que están fuera de las tablas cambiar a negritas, itálicas, color: lightcoral */
-/*ERROR*/
-code:not(table>code) {
+body>p>code,
+body>ul>li>code {
     font-weight: bold;
     font-style: italic;
     color: lightcoral;
-    font-size: xx-large;
 }
 
 /* Regla 9: Al poner el mouse en una celda de una tabla par que cambie su bc y el de la última celda del siguiente renglón.  BC =blue, texto= White */
@@ -93,9 +94,27 @@ table:nth-of-type(5) tr:nth-of-type(n+8) td:nth-of-type(3) {
 }
 
 /* Regla 12: Ocultar las tablas que están después de la tabla de interés la cual se selecciona poniendo el mouse en su título.  */
-
+h3:hover~table~table {
+    margin: auto;
+    display: none;
+}
 
 /* Regla 13: Poner un * al final en los li que no sean ni el primero ni el último de la lista y solo si son elementos que están dentro de una tabla.  */
-
+table>tbody>tr>td>ul>li:not(:first-child):not(:last-child)::after {
+    content: "*";
+}
 
 /* R14:  Selecciona todos los elementos que tengan el atributo class  y ponlos con fuente itálica y subrayados.  */
+h1[class],
+h2[class],
+h3[class],
+div[class],
+span[class],
+th[class],
+td[class],
+code[class],
+br[class],
+ul[class] {
+    font-style: italic;
+    text-decoration: underline;
+}
